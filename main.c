@@ -5,20 +5,11 @@
 
 int main(void)
 {
- int err=0,countOfElements=0;
- int *array;
- int answer;
- err=InputArray("data.txt", &array, &countOfElements);
- if(err!=0)
-  printf("Error!!!\n");
- else
-  {
-	if (countOfElements==0){
-		printf("File is empty!!!");
-	} else {
-		answer=searchArray(array,countOfElements);
-		printf("Number of elements in new array: %i",answer);
-	}
-  }
-return err;
+	int err=0,elementsCount;
+	int *arrayForSorting;
+	int isSorted;
+	double timeOfExecution;
+	err=InputArray("data.txt", &arrayForSorting, &elementsCount);
+	err=InputArray(&arrayForSorting, &timeOfExecution);
+	return err;
 }
